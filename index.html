@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto</title>
+    <link rel="stylesheet" href="./styles/style.css"> <!--se utiliza la ruta cuando se trabajan con mas de un archivo HTML-->
+</head>
+
+<body>
+    <header class="header">
+        <nav class="header__menu">
+            <a class="header__menu__link" href="index.html">Home</a> <!--Se utiliza el href para que trabaje el link-->
+            <a class="header__menu__link" href="about.html">Sobre mí</a> <!--Se utiliza el href para que trabaje el link-->
+        </nav>
+    </header>
+
+    <main class="presentacion">
+        <section class="presentacion__contenido">
+            <h1 class="presentacion__contenido__titulo">
+                Eleve tus oportunidades laborales a otro nivel 
+                <strong class="titulo-destaque">con un aprendizaje Front-end y Back-end de calidad!</strong> 
+            </h1>
+                <p class="presentacion__contenido__texto"> ¡Hola! Soy Alberto González,
+                    Soy un Ingeniero QA del area de TI, me gusta todo lo relacionado a la tecnología, 
+                    inteligencia artificial y programacion. Actualmente estoy aprendiendo Front-end 
+                    y Back-end para poder desempeñarme en el area de desarrollo. 
+                </p>
+
+                <div class="presentacion__enlaces">
+                    <h2 class="presentacion__enlaces__subtitulos">Accede a mis redes:</h2>
+                
+                <!--Codigo para generar el boton y vaya a Github o Instagram o cualquier red solo cambiando los valores -->
+                    <!--   <button onclick= "window.location.href= 'https://www.github.com/';">
+                    Github
+                    </button>   -->
+
+                    <!--Codigo del link para dirigir a Github-->
+                    <a class="presentacion__enlaces__link" href="https://github.com/">
+                        <img src="./assets/github.png" alt="Logo de Github">
+                        Github</a>
+
+                    <!--Codigo del link para dirigir a LinkedIn-->
+                    <a class="presentacion__enlaces__link" href="https://linkedin.com/">
+                        <img src="./assets/linkedin.png" alt="Logo de LinkedIn">
+                        LinkedIn</a>
+       
+                     <!--Codigo del link para dirigir a Instagram-->
+                    <a class="presentacion__enlaces__link" href="https://www.instagram.com/">
+                        <img src="./assets/instagram.png" alt="Logo de Instagram">
+                        Instagram</a>    
+                </div>
+        </section>
+                <img class= "presentacion__imagen" src="./assets/Imagen_Beto.png" alt="Imagen de Beto y sus pasatiempos">
+    </main>
+
+    <footer class="footer">
+        <P>Desarrollado por Beto</P>
+    </footer>
+
+</body>
+</html>

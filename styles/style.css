@@ -1,0 +1,232 @@
+/* Se utiliza para importar la fuente de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Se declara las variables para utilizar posteriormente y en el codigo se usa "var + nombre de variable"*/
+:root{
+    --color-primario: #001524; 
+    --color-secundario: #F5F3F4; 
+    --color-terciario: #8AC926; 
+    --color-cuaternario: #494b32;
+   
+    --fuente-montserrat: 'Montserrat', sans-serif;
+    --fuente-krona: 'Krona One', sans-serif;
+}
+
+/* "RESET CSS" Se utiliza * para determinar que es un cambio universal en todos los elementos de html*/
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: var(--color-primario);
+    color: var(--color-secundario);
+    /* height: 100vh;  (Se utiliza 100% de la altura de la ventana del navegador, se elimina cuando se agrega un footer) */
+    box-sizing: border-box; /* Se utiliza para que el padding y el margin no afecten el tamaño del elemento */
+}
+
+/* Se utiliza punto para determinar que es una clase */
+.header{
+   padding: 2% 0% 0% 15%; 
+}
+
+.header__menu{
+    display: flex;
+    gap: 80px;
+}
+
+.header__menu__link{
+    font-family: var(--fuente-montserrat);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-secundario);
+    text-decoration: none;
+}
+
+.presentacion {
+    display: flex; 
+    align-items: center; 
+    padding: 6% 15%; 
+    justify-content: space-between; 
+    gap:82px;
+}
+
+.presentacion__contenido{
+    width: 50%; /* Se utiliza para que el contenido no se vea tan grande */
+    display: flex;
+    flex-direction: column; /* Se utiliza para que el contenido se vea en una sola columna */
+    justify-content: center; /* Se utiliza para centrar el contenido verticalmente */
+    gap: 40px; /* Se utiliza para separar los elementos del contenido */ 
+}
+
+.presentacion__contenido__titulo{
+    font-size: 2.25rem; /* Se utiliza para que el tamaño de la fuente sea grande */
+    font-family: var(--fuente-krona);
+    color: var(--color-secundario);
+}
+
+.titulo-destaque{
+    color: var(--color-terciario);
+}
+
+.presentacion__contenido__texto{
+    font-size: 1.5rem;
+    font-family: var(--fuente-montserrat);
+}
+
+.presentacion__enlaces{
+    display:flex;
+    justify-content: center;
+    flex-direction: column; /* Se utiliza para que los enlaces se vean en una sola columna */
+    align-items: center; /* Se utiliza para centrar el contenido verticalmente */
+    gap: 32px;
+    flex-wrap: wrap; /* Se utiliza para que los enlaces se vean en una sola columna */
+}
+
+.presentacion__enlaces__subtitulos{
+    font-family: var(--fuente-montserrat);
+    font-size: 1.5rem;
+    font-weight: 400;
+    flex-wrap: wrap;
+}
+
+.presentacion__enlaces__link{
+    width: 50%;
+    text-align: center;
+    padding: 21.5px 0;
+    border-radius: 8px;
+    font-family: var(--fuente-montserrat);
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-decoration: none; /* Se utiliza para quitar el subrayado del enlace */
+    color: var(--color-secundario); /* Se utiliza para cambiar el color del texto del enlace */
+    border: 8px double var(--color-terciario);
+    display: flex;
+    justify-content: center; /* Se utiliza para centrar el contenido horizontalmente */
+    gap: 10px; /* Se utiliza para separar los elementos del enlace */
+    flex-wrap: wrap;
+}
+
+.presentacion__enlaces__link:hover{
+    background-color: var(--color-cuaternario); /* Se utiliza para cambiar el color de fondo del enlace al pasar el mouse por encima */
+    transition: 0.50s; /* Se utiliza para que el cambio de color sea suave */
+}
+
+.presentacion__imagen{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: auto;
+}
+
+.footer{
+    background-color: var(--color-terciario);
+    padding: 1.5rem; /* Se utiliza para separar el contenido del footer del resto de la pagina */
+    color: var(--color-primario);
+    text-align: center; /* Se utiliza para centrar el texto del footer */
+    font-family: var(--fuente-montserrat);
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+
+/*Galeria - para poder poner imagenes de rejilla de 2 por fila*/
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    justify-content: center;
+    margin: auto;
+    max-width: 600px;
+  }
+
+  .gallery img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px; /* Estilo opcional */
+  }
+
+.image-container {
+    position: relative;
+    width: 300px;
+    aspect-ratio: 3 / 4;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    display: flex;
+  }
+  
+.image-container img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.4s ease-in-out;
+    display: flex;
+  }
+  
+.image-container img.hover {
+    opacity: 0;
+  }
+  
+.image-container:hover img.hover {
+    opacity: 1;
+  }
+  
+.image-container:hover img.default {
+    opacity: 0;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+
+/* Se utiliza @media queries para la propiedad de que sea responsiva al comportamiento para cambiar a mobile*/
+    @media (max-width: 1200px){
+        
+        .header{
+            padding:10%;
+        }
+
+        .header__menu{
+            justify-content: center;
+        }
+
+        .presentacion{
+            flex-direction: column;
+            padding: 5%;            
+        }
+
+        .presentacion__contenido{
+            width: auto;
+        }
+
+        .galeria-imagenes {
+            font: 1em sans-serif;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            grid-template-columns: 1fr;
+        }
+
+        .presentacion__imagen {
+            display: flex;
+            justify-content: center;
+        }
+        
+        .presentacion__imagen img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px; /* Opcional: bordes redondeados */
+            width: 100%;
+        }
+
+        .gallery {
+            grid-template-columns: 1fr; /* 1 columna en móvil */
+          }
+        
+    }
+    
